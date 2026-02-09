@@ -1,0 +1,23 @@
+// @import './loading.scss';
+// @import './errors.scss';
+// @import './user-item.scss';
+// @import './user-list.scss';
+
+.srp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 3rem 0;
+    text-align: center;
+    line-height: 1.2;
+  }
+}

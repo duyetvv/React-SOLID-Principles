@@ -1,0 +1,61 @@
+.ocp {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    color: #212529;
+    margin-bottom: 32px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  h2 {
+    color: #495057;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  h4 {
+    color: #495057;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+}
+
+// Flex utility classes (used in components)
+.flex-container {
+  display: flex;
+  gap: 10px;
+
+  &--spaced {
+    gap: 20px;
+  }
+
+  &--centered {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--end {
+    justify-content: flex-end;
+  }
+}
