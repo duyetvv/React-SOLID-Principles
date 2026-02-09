@@ -1,10 +1,10 @@
-import { useGetUser } from './hooks/useGetUser';
-import UserList from './components';
-import Loading from './components/UserLoading';
-import UserErrors from './components/UserErrors';
-import EmptyData from './components/UserEmptyData';
+import { useGetUser } from "./hooks/useGetUser";
+import UserList from "./components";
+import Loading from "./components/UserLoading";
+import UserErrors from "./components/UserErrors";
+import EmptyData from "./components/UserEmptyData";
 
-import './styles/index.scss';
+import "./styles/index.scss";
 
 function SingleResponsiblePrinciple() {
   const { loading, data, errors } = useGetUser();
