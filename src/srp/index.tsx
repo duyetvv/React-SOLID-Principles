@@ -1,8 +1,8 @@
 import { useGetUser } from './hooks/useGetUser';
-import UserList from './user.list';
-import Loading from './user.loading';
-import UserErrors from './user.errors';
-import EmptyData from './user.empty-data';
+import UserList from './components';
+import Loading from './components/UserLoading';
+import UserErrors from './components/UserErrors';
+import EmptyData from './components/UserEmptyData';
 
 import './styles/index.scss';
 

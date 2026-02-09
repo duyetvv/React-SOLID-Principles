@@ -1,0 +1,149 @@
+.srp__error {
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  h3 {
+    margin: 0 0 1rem 0;
+    color: #991b1b;
+    font-size: 1.125rem;
+  }
+}
+
+.srp__error-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: disc;
+
+  li {
+    color: #7f1d1d;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.srp__empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #9ca3af;
+
+  p {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+}
+
+.spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.srp__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    color: #6b7280;
+  }
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f9fafb 100%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    word-break: break-word;
+  }
+
+  &__email {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+    word-break: break-all;
+  }
+
+  &__id {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.75rem;
+    color: #9ca3af;
+  }
+}
+
+.user-list {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem 1rem;
+
+  &__title {
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 2rem 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
