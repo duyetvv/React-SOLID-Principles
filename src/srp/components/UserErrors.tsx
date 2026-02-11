@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles/errors.scss";
+import "../styles/errors.scss";
 
 interface ErrorsProps {
   errors: string[];

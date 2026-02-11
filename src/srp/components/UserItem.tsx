@@ -2,7 +2,7 @@ import React from "react";
 
 import { type User } from "../types/user";
 
-import "./styles/user-item.scss";
+import "../styles/user-item.scss";
 
 interface UserItemProps {
   user: User;

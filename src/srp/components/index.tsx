@@ -3,7 +3,7 @@ import React from "react";
 import UserItem from "./UserItem";
 import { type User } from "../types/user";
 
-import "./styles/user-list.scss";
+import "../styles/user-list.scss";
 
 interface UserListProps {
   users: User[];
