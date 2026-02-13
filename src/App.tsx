@@ -1,6 +1,7 @@
 // import SingleResponsiblePrinciple from './srp';
 // import LiskovSubstitutionPrinciple from "./lsp";
-import InterfaceSegregationPrinciple from "./isp";
+// import InterfaceSegregationPrinciple from "./isp";
+import DependenceInversionPrincipe from "./dip";
 
 import "./App.css";
 
@@ -11,7 +12,8 @@ function App() {
       {/* <SingleResponsiblePrinciple /> */}
       {/* <OpenClosedPrinciple /> */}
       {/* <LiskovSubstitutionPrinciple /> */}
-      <InterfaceSegregationPrinciple />
+      {/* <InterfaceSegregationPrinciple /> */}
+      <DependenceInversionPrincipe />
     </div>
   );
 }

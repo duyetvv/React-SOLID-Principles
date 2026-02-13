@@ -1,0 +1,23 @@
+// src/dip/styles/index.scss
+.dip-container {
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.user-list-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
