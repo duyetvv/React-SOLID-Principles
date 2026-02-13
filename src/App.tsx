@@ -1,5 +1,6 @@
 // import SingleResponsiblePrinciple from './srp';
-import LiskovSubstitutionPrinciple from "./lsp";
+// import LiskovSubstitutionPrinciple from "./lsp";
+import InterfaceSegregationPrinciple from "./isp";
 
 import "./App.css";
 
@@ -9,7 +10,8 @@ function App() {
       <h1>Solid Principles in React</h1>
       {/* <SingleResponsiblePrinciple /> */}
       {/* <OpenClosedPrinciple /> */}
-      <LiskovSubstitutionPrinciple />
+      {/* <LiskovSubstitutionPrinciple /> */}
+      <InterfaceSegregationPrinciple />
     </div>
   );
 }
