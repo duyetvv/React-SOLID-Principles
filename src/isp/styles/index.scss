@@ -1,0 +1,36 @@
+.isp-container {
+  padding: 20px;
+  font-family: sans-serif;
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .button {
+    margin: 4px;
+  }
+
+  .log-container {
+    background-color: #f9f9f9;
+  }
+
+  .log-list {
+    height: 150px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 8px;
+    list-style: none;
+  }
+
+  .log-item {
+    font-size: 14px;
+  }
+
+  .player-section {
+    margin-bottom: 16px;
+  }
+}
