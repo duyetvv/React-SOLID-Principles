@@ -2,6 +2,11 @@
 
 This directory contains a React example demonstrating the Liskov Substitution Principle (LSP), along with the Single Responsibility Principle (SRP) and Open/Closed Principle (OCP).
 
+## Crucial Core
+
+**Core Idea:** Subtypes must be substitutable for their base types.
+**Implementation:** Ensuring interchangeable services (Mock vs Real API) adhere to the same contract and behavior (e.g., error propagation).
+
 ## Principle Overview
 
 -   **Liskov Substitution Principle (LSP):** Subtypes must be substitutable for their base types. In React, a child component should be usable wherever a base component is, without changing the program's correctness. This means the child should have at least the same props as the base and behave predictably.

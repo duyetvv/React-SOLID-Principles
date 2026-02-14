@@ -2,6 +2,11 @@
 
 This directory contains an example demonstrating the Dependency Inversion Principle (DIP) in a React application.
 
+## Crucial Core
+
+**Core Idea:** Depend upon abstractions, not concretions.
+**Implementation:** Components depend on interfaces (abstractions), and concrete implementations are injected via props.
+
 ## Core Concepts Illustrated
 
 1.  **Abstraction**: The `DataService` interface in `types/index.ts` defines a contract for fetching users. This is the abstraction that both high-level and low-level modules depend on.
