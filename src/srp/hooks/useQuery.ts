@@ -1,20 +1,28 @@
 import { useState, useEffect } from 'react';
-import { fetchUsers } from '../services/user';
 
-import { type User, type UseUserResult } from '../types/user';
+// A generic result type
+export interface QueryResult<T> {
+  loading: boolean;
+  data: T | null;
+  errors: string[];
+}
 
-export const useGetUser = (): UseUserResult => {
+// The fetcher function is an abstraction. The hook depends on this, not on a concrete implementation.
+type Fetcher<T> = ({ signal }: { signal: AbortSignal }) => Promise<T>;
+
+export const useQuery = <T>(fetcher: Fetcher<T>): QueryResult<T> => {
   const [loading, setLoading] = useState<boolean>(true);
-  const [data, setData] = useState<User[]>([]);
+  const [data, setData] = useState<T | null>(null);
   const [errors, setErrors] = useState<string[]>([]);
 
   useEffect(() => {
     const abortController = new AbortController();
 
-    const loadUsers = async () => {
+    const loadData = async () => {
       try {
-        const users = await fetchUsers({ signal: abortController.signal });
-        setData(users);
+        setLoading(true);
+        const result = await fetcher({ signal: abortController.signal });
+        setData(result);
         setErrors([]);
       } catch (error) {
         if (error instanceof Error && error.name === 'AbortError') {
@@ -23,18 +31,18 @@ export const useGetUser = (): UseUserResult => {
 
         const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
         setErrors([errorMessage]);
-        setData([]);
+        setData(null);
       } finally {
         setLoading(false);
       }
     };
 
-    loadUsers();
+    loadData();
 
     return () => {
       abortController.abort();
     };
-  }, []);
+  }, [fetcher]); // Re-run effect if the fetcher function changes
 
   return { loading, data, errors };
 };
