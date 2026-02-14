@@ -1,73 +1,24 @@
-# React + TypeScript + Vite
+# SOLID Principles in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository provides practical, hands-on examples of the five SOLID principles of object-oriented design, implemented in a modern React and TypeScript context. Each principle is demonstrated in its own directory, containing code that both violates and (after refactoring) complies with the principle, along with a detailed `README.md` explaining the concepts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## The Principles
 
-## React Compiler
+Click on a principle to explore its detailed explanation and code implementation.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. [Single Responsibility Principle (SRP)](./src/srp/README.md)
+A component or module should have one, and only one, reason to change. Our example demonstrates how to separate data-fetching logic from state management and UI orchestration.
 
-## Expanding the ESLint configuration
+### 2. [Open/Closed Principle (OCP)](./src/ocp/README.md)
+Software entities (classes, modules, functions) should be open for extension but closed for modification. Our examples showcase how patterns like theming, render props, and slots allow for new functionality without altering existing code.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 3. [Liskov Substitution Principle (LSP)](./src/lsp/README.md)
+Subtypes must be substitutable for their base types without affecting the correctness of the program. The example illustrates how a component's behavioral contract must be honored by all its variants.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 4. [Interface Segregation Principle (ISP)](./src/isp/README.md)
+Clients should not be forced to depend on interfaces they do not use. We show how "fat" interfaces can be broken down into smaller, role-specific interfaces to create more decoupled and maintainable code.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 5. [Dependency Inversion Principle (DIP)](./src/dip/README.md)
+High-level modules should not depend on low-level modules; both should depend on abstractions. The example demonstrates how to use dependency injection to create a flexible, "pluggable" architecture.
